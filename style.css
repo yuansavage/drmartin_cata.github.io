@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
+html, body {
+  font-family: Goldman;
+  background-color: white;
+}
+html .menu, body .menu {
+  padding: 20px;
+}
+
+input {
+  border-radius: 5px;
+}
+
+.card {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.card .cover {
+  width: 220px;
+}
+.card .info {
+  padding: 10px;
+}
+.card .info .price {
+  font-size: 25px;
+}
+.card .info h3 {
+  margin: 0px;
+}
+.card .info h3 .soldout {
+  float: right;
+  font-size: 15px;
+  color: red;
+  opacity: 0.6;
+}
+.card .info .color {
+  opacity: 0.4;
+}

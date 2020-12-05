@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Dr.Martin Catalog</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <div class="control">
+    <label>min-price</label>
+    <input v-model="minPrice"/>
+    <label>max-price</label>
+    <input v-model="maxPrice"/>
+    <labek>Search</labek>
+    <input v-model="keyWord"/><br/><span v-for="card in cards">
+      <input type="checkbox" v-model="card.soldOut"/><span>{{card.title}}    </span></span>
+  </div>
+  <div class="menu">
+    <h4 v-if="keyWord">Results...</h4>
+    <div class="cards">
+      <div class="card" v-for="card in cards" v-if="(card.price&gt;minPrice) &amp;&amp; (card.price&lt;maxPrice)&amp;&amp;(card.title.indexOf(keyWord)!=-1)"><img class="cover" v-bind:src="card.cover"/>
+        <div class="info">
+          <h3>{{card.title}}
+            <div class="soldout" v-show="card.soldOut">SOLDOUT</div>
+          </h3>
+          <div class="price">NT${{card.price}}</div>
+          <div class="color">{{card.color}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
