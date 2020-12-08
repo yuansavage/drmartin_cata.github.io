@@ -2,7 +2,7 @@ Dr.Martin catalog
 -----------------
 This catalog website is made by Vue.js.
 
-[!gif](https://i.imgur.com/8779Sqr.gif)
+![gif](https://i.imgur.com/8779Sqr.gif)
 
 
 
